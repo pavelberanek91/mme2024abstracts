@@ -1,0 +1,170 @@
+\documentclass[12pt]{report}
+
+\usepackage[a4paper,margin=1in]{geometry} % nastavení dle poskytnutého dokumentu
+
+
+\usepackage{lipsum}
+\usepackage{microtype} 
+\usepackage{amssymb,amsmath,amsfonts}
+
+\usepackage[T1]{fontenc} % výstupní formátování
+\usepackage[utf8]{inputenc} % vstupní formátování
+\usepackage[czech,english]{babel} % základní angličtina
+
+\usepackage{enumitem}
+
+\usepackage{etoolbox}
+
+\usepackage{pdfpages}
+
+\usepackage{tocloft}
+\newcommand{\cftsubsectiondotsep}{\cftnodots}
+\cftpagenumbersoff{subsection}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\chead{\textit{42nd International Conference on Mathematical Methods in Economics}}
+
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+\usepackage[hyperindex]{hyperref}%do not put packages after hyperref
+
+\input{abstraktik}
+
+\def\theaipage{\string\hyperpage{\thepage}} 
+
+\newcommand{\eunumerical}{keywords}
+\newcommand{\eualphabetical}{authors}
+
+\title{Book of Abstracts}
+\author{Hossein Moosaei}
+\date{2024}
+
+\setcounter{secnumdepth}{-1}
+
+
+\hypersetup{linktocpage=true,colorlinks,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\begin{document}
+	%\includepdf[fitpaper=true, pages=-]{front-page-iii.pdf} %vloží obálku -- první stranu
+
+    \input{chapters/title-page}
+    \clearpage
+    
+    \input{chapters/pa-titul}
+    \clearpage
+
+    \tableofcontents
+    \clearpage
+
+    \pagenumbering{arabic}
+
+    \input{chapters/organ}
+    \clearpage
+
+    \input{chapters/welcome}
+    \clearpage
+
+    \makeatletter\@openrightfalse
+    \addcontentsline{toc}{part}{Invited Plenary Lectures} % parametr 'part' lze změnit na 'chapter'
+    \part*{Invited Plenary Lectures}
+    \cleardoublepage
+    \@openrighttrue\makeatother 
+    \input{chapters/invited/abs001}
+    \input{chapters/invited/abs002}
+
+
+    \makeatletter\@openrightfalse
+    \addcontentsline{toc}{part}{Abstracts} % parametr 'part' lze změnit na 'chapter'
+    \part*{Abstracts}
+    \cleardoublepage
+    \@openrighttrue\makeatother 
+    
+    \input{chapters/abstracts/abs1}
+    \input{chapters/abstracts/abs2}
+    \input{chapters/abstracts/abs3}
+    \input{chapters/abstracts/abs4}
+    \input{chapters/abstracts/abs5}
+    \input{chapters/abstracts/abs6}
+    \input{chapters/abstracts/abs7}
+    \input{chapters/abstracts/abs8}
+    \input{chapters/abstracts/abs9}
+    \input{chapters/abstracts/abs10}
+    \input{chapters/abstracts/abs11}
+    \input{chapters/abstracts/abs12}
+    \input{chapters/abstracts/abs13}
+    \input{chapters/abstracts/abs14}
+    \input{chapters/abstracts/abs15}
+    \input{chapters/abstracts/abs16}
+    \input{chapters/abstracts/abs17}
+    \input{chapters/abstracts/abs18}
+    \input{chapters/abstracts/abs19}
+    \input{chapters/abstracts/abs20}
+    \input{chapters/abstracts/abs21}
+    \input{chapters/abstracts/abs22}
+    \input{chapters/abstracts/abs23}
+    \input{chapters/abstracts/abs24}
+    \input{chapters/abstracts/abs25}
+    \input{chapters/abstracts/abs26}
+    \input{chapters/abstracts/abs27}
+    \input{chapters/abstracts/abs28}
+    \input{chapters/abstracts/abs29}
+    \input{chapters/abstracts/abs30}
+    \input{chapters/abstracts/abs31}
+    \input{chapters/abstracts/abs32}
+    \input{chapters/abstracts/abs33}
+    \input{chapters/abstracts/abs34}
+    \input{chapters/abstracts/abs35}
+    \input{chapters/abstracts/abs36}
+    \input{chapters/abstracts/abs37}
+    \input{chapters/abstracts/abs38}
+    \input{chapters/abstracts/abs39}
+    \input{chapters/abstracts/abs40}
+    \input{chapters/abstracts/abs41}
+    \input{chapters/abstracts/abs42}
+    \input{chapters/abstracts/abs43}
+    \input{chapters/abstracts/abs44}
+    \input{chapters/abstracts/abs45}
+    \input{chapters/abstracts/abs46}
+    \input{chapters/abstracts/abs47}
+    \input{chapters/abstracts/abs48}
+    \input{chapters/abstracts/abs49}
+    \input{chapters/abstracts/abs50}
+    \input{chapters/abstracts/abs51}
+    \input{chapters/abstracts/abs52}
+    \input{chapters/abstracts/abs53}
+    \input{chapters/abstracts/abs54}
+    \input{chapters/abstracts/abs55}
+    \input{chapters/abstracts/abs56}
+    \input{chapters/abstracts/abs57}
+    \input{chapters/abstracts/abs58}
+    \input{chapters/abstracts/abs59}
+    \input{chapters/abstracts/abs60}
+    \input{chapters/abstracts/abs61}
+    \input{chapters/abstracts/abs62}
+    \input{chapters/abstracts/abs63}
+    \input{chapters/abstracts/abs64}
+    \input{chapters/abstracts/abs65}
+    \input{chapters/abstracts/abs66}
+    \input{chapters/abstracts/abs67}
+    \input{chapters/abstracts/abs68}
+    \input{chapters/abstracts/abs69}
+    \input{chapters/abstracts/abs70}
+    \input{chapters/abstracts/abs71}
+    \input{chapters/abstracts/abs72}
+    \input{chapters/abstracts/abs73}
+    \input{chapters/abstracts/abs74}
+    \input{chapters/abstracts/abs75}
+    \input{chapters/abstracts/abs76}
+    \input{chapters/abstracts/abs77}
+    \input{chapters/abstracts/abs78}
+    \input{chapters/abstracts/abs79}
+    \input{chapters/abstracts/abs80}
+    \input{chapters/abstracts/abs81}
+    \input{chapters/abstracts/abs82}
+
+    \input{chapters/sponsors}
+
+	%\includepdf[fitpaper=true, pages=-]{end-page.pdf} %vloží obálku -- poslední stranu\\
+\end{document}

@@ -1,0 +1,38 @@
+\usepackage{ifthen}
+
+\newcommand{\hlavka}[5]{%
+\vspace*{0.1cm}%
+\begin{center} {\LARGE \textbf{#1}}\\[0.5cm] %\vspace{0.5cm}%
+{
+    \Large #2\footnote{\href{mailto:#3}{e-mail: #3}}
+    \ifthenelse{\equal{#5}{  }}{}{,#5}
+}\\[0.3cm]%
+#4
+\end{center}%
+\ifthenelse{\equal{#5}{  }}{\addcontentsline{toc}{section}{#2: \textit{#1}}}{\addcontentsline{toc}{section}{#2,#5: \textit{#1}}}
+}
+
+%\hlavka{Title}{Author}{e-mail}{Affiliation}{Other authors}
+
+\newcommand{\nazev}[1]{%
+\vspace*{0.1cm} \begin{center} \LARGE \textbf{#1} \end{center} %\vspace{0.5cm}%
+\addcontentsline{toc}{section}{\textit{#1}}
+}
+
+\newcommand{\autor}[2]{%
+\begin{center} \Large #1\footnote{\href{mailto:#2}{e-mail: #2}}\end{center}%
+\addcontentsline{toc}{subsection}{\textsc{#1}}
+}
+
+
+\newcommand{\odkudjsem}[1]{%
+\begin{center} #1 \end{center}%
+}
+
+\newenvironment{Abstrakt}{%
+\vspace{0.5cm} \noindent
+}{
+\vspace{0.5cm}
+}
+
+\newcommand{\klicovaslova}[1]{\textbf{Keywords:}\ #1 }
